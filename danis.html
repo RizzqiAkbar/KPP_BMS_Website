@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Rizqi Akbar</title>
+  <style>
+    body {
+      background-color: #0e0e0e;
+      color: #e0e0e0;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .profile-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid #00ff88;
+      border-radius: 16px;
+      padding: 40px 30px;
+      text-align: center;
+      max-width: 400px;
+      box-shadow: 0 0 15px #00ff88;
+      animation: pulse 3s infinite alternate;
+    }
+
+    @keyframes pulse {
+      from { box-shadow: 0 0 10px #00ff88; }
+      to { box-shadow: 0 0 25px #00ff88; }
+    }
+
+    .profile-card img {
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #00ff88;
+      box-shadow: 0 0 20px #00ff88;
+      margin-bottom: 20px;
+      transition: 0.3s;
+    }
+
+    .profile-card img:hover {
+      transform: scale(1.05);
+    }
+
+    h1 {
+      color: #00ff88;
+      margin-bottom: 5px;
+      font-size: 24px;
+    }
+
+    p {
+      margin: 5px 0;
+      color: #cfcfcf;
+      font-size: 15px;
+    }
+
+    .socials {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .socials a {
+      color: #00ff88;
+      text-decoration: none;
+      font-size: 28px;
+      transition: 0.3s;
+    }
+
+    .socials a:hover {
+      color: white;
+      transform: scale(1.2);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      color: #666;
+      font-size: 12px;
+    }
+  </style>
+
+  <!-- Font Awesome (official CDN link, works perfectly) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="profile-card">
+    <img src="images/#" alt="Foto Daniswara">
+    <h1>Daniswara Fausta Novanto</h1>
+    <p><strong>NRP:</strong> 50272410XX</p>
+
+    <div class="socials">
+      <a href="https://instagram.com/#" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="https://www.linkedin.com/in/#" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+
+  <footer>© 2025 Daniswara Fausta Novanto</footer>
+</body>
+</html>
