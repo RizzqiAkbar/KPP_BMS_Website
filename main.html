@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio BMS - Kelompok 14</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="portfolio-page">
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Kelompok 14 BMS</h1>
+      <a href="index.html" class="btn-neon">Kembali ke Landing</a>
+    </nav>
+  </header>
+
+  <section class="gallery-section">
+    <h2 class="section-title">Galeri Penugasan BMS</h2>
+    <p class="subtitle">Klik salah satu proyek untuk melihat tampilannya secara penuh.</p>
+
+    <div class="gallery-grid">
+      <!-- Video -->
+      <div class="gallery-item" onclick="openModal('videos/KPP_Fotografi.mp4', 'video')">
+        <video muted>
+          <source src="videos/KPP_Fotografi.mp4" type="video/mp4">
+        </video>
+        <div class="caption">
+          <a href="rizqi.html" class="contributor-link">Rizqi Akbar</a>
+        </div>
+      </div>
+
+      <div class="gallery-item" onclick="openModal('videos/KPP_Media.mp4', 'video')">
+        <video muted>
+          <source src="videos/KPP_Media.mp4" type="video/mp4">
+        </video>
+        <div class="caption">
+          <a href="rizqi.html" class="contributor-link">Rizqi Akbar</a>
+        </div>
+      </div>
+
+      <div class="gallery-item" onclick="openModal('videos/demo3.mp4', 'video')">
+        <video muted>
+          <source src="videos/demo3.mp4" type="video/mp4">
+        </video>
+        <div class="caption">
+          <a href="danis.html" class="contributor-link">Daniswara</a>
+        </div>
+      </div>
+
+      <!-- Gambar -->
+      <div class="gallery-item" onclick="openModal('images/tugas1.png', 'image')">
+        <img src="images/tugas1.png" alt="Tugas 1">
+        <div class="caption">
+          <a href="danis.html" class="contributor-link">Daniswara</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+
+  <footer>
+    <p>© 2025 Kelompok 14 KPP BMS — Semua Hak Dilindungi</p>
+  </footer>
+
+  <script>
+    function openModal(src, type) {
+      const modal = document.getElementById('modal');
+      const content = document.getElementById('modalContent');
+      if (type === 'video') {
+        content.innerHTML = `<video controls autoplay><source src="${src}" type="video/mp4"></video>`;
+      } else {
+        content.innerHTML = `<img src="${src}" alt="Preview">`;
+      }
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('modal');
+      const content = document.getElementById('modalContent');
+      modal.style.display = 'none';
+      content.innerHTML = '';
+      document.body.style.overflow = 'auto';
+    }
+  </script>
+</body>
+</html>
